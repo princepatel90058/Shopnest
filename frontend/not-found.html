@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Page not found · ShopNest</title>
+    <meta name="robots" content="noindex">
+    <link rel="icon" href="/img/logo.svg" type="image/svg+xml">
+    <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body data-page="notfound">
+    <header id="site-header"></header>
+
+    <main class="container">
+        <div class="state" style="padding:90px 20px">
+            <div class="icon">🧭</div>
+            <h3 style="font-size:28px">This page wandered off</h3>
+            <p style="max-width:420px;margin:0 auto 22px">The link may be broken or the product may have moved. Let's get you back to the good stuff.</p>
+            <div style="display:flex;gap:12px;justify-content:center;flex-wrap:wrap">
+                <a class="btn btn-primary" href="/">Go home</a>
+                <a class="btn btn-ghost" href="/shop">Browse the shop</a>
+            </div>
+        </div>
+    </main>
+
+    <footer class="site-footer" id="site-footer"></footer>
+    <script src="/js/site.js"></script>
+    <script>
+        // Header/footer render for this static page (no page renderer needed).
+        document.addEventListener('DOMContentLoaded', () => { renderHeader(); renderFooter(); });
+    </script>
+</body>
+</html>

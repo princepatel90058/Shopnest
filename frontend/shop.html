@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>All products · ShopNest</title>
+    <meta name="description" content="Browse every ShopNest product — audio, wearables, accessories, computers, cameras and home.">
+    <link rel="icon" href="/img/logo.svg" type="image/svg+xml">
+    <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body data-page="shop">
+    <header id="site-header"></header>
+
+    <main class="container">
+        <h1 class="page-title" id="shop-title">All products</h1>
+        <p class="page-sub" id="shop-count"></p>
+        <div style="display:flex;justify-content:space-between;align-items:center;gap:14px;margin-bottom:20px;flex-wrap:wrap">
+            <span style="color:var(--muted);font-size:14px" id="shop-hint">Sorted by popularity</span>
+            <label style="font-size:14px;font-weight:600">Sort by
+                <select id="sort-select" style="margin-left:8px;padding:9px 12px;border:1.5px solid var(--line);border-radius:999px">
+                    <option value="featured">Featured</option>
+                    <option value="priceAsc">Price: low to high</option>
+                    <option value="priceDesc">Price: high to low</option>
+                    <option value="rating">Top rated</option>
+                </select>
+            </label>
+        </div>
+        <div class="grid-products" id="shop-grid"></div>
+    </main>
+
+    <footer class="site-footer" id="site-footer"></footer>
+    <script src="/js/site.js"></script>
+    <script src="/js/pages.js"></script>
+</body>
+</html>

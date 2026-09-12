@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkout · ShopNest</title>
+    <meta name="description" content="Secure checkout with cash on delivery or UPI.">
+    <link rel="icon" href="/img/logo.svg" type="image/svg+xml">
+    <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body data-page="checkout">
+    <header id="site-header"></header>
+
+    <main class="container">
+        <h1 class="page-title">Checkout</h1>
+        <p class="page-sub">Shipping details and payment — totals are re-verified on the server.</p>
+        <div id="checkout-root">
+            <div class="checkout-grid">
+                <form class="card" style="padding:24px" id="checkout-form" novalidate>
+                    <div class="form-error" id="form-error"></div>
+                    <h3 style="margin-top:0">Contact</h3>
+                    <div class="field"><label>Full name</label><input name="fullName" required autocomplete="name" placeholder="Priya Sharma"></div>
+                    <div class="field-row">
+                        <div class="field"><label>Phone</label><input name="phone" required pattern="[0-9+\- ]{7,15}" autocomplete="tel" placeholder="98765 43210"></div>
+                        <div class="field"><label>PIN code</label><input name="pin" required pattern="\d{5,6}" inputmode="numeric" autocomplete="postal-code" placeholder="560001"></div>
+                    </div>
+                    <h3>Address</h3>
+                    <div class="field"><label>Street address</label><input name="line1" required autocomplete="address-line1" placeholder="Flat 402, Green Meadows"></div>
+                    <div class="field"><label>Landmark / area (optional)</label><input name="line2" autocomplete="address-line2" placeholder="Near Metro Station"></div>
+                    <div class="field-row">
+                        <div class="field"><label>City</label><input name="city" required autocomplete="address-level2" placeholder="Bengaluru"></div>
+                        <div class="field"><label>State</label><input name="state" required autocomplete="address-level1" placeholder="Karnataka"></div>
+                    </div>
+                    <h3>Payment</h3>
+                    <div class="pay-options">
+                        <label class="pay-option"><input type="radio" name="paymentMethod" value="cod" checked>
+                            <span><b>Cash on delivery</b><br><span style="color:var(--muted);font-size:13px">Pay in cash when your order arrives</span></span></label>
+                        <label class="pay-option"><input type="radio" name="paymentMethod" value="upi">
+                            <span><b>UPI</b><br><span style="color:var(--muted);font-size:13px">Simulated in demo mode</span></span></label>
+                    </div>
+                    <button class="btn btn-primary btn-block" id="place-order" type="submit" style="margin-top:20px">Place order</button>
+                </form>
+                <aside class="card summary" id="co-summary"></aside>
+            </div>
+        </div>
+    </main>
+
+    <footer class="site-footer" id="site-footer"></footer>
+    <script src="/js/site.js"></script>
+    <script src="/js/pages.js"></script>
+</body>
+</html>
